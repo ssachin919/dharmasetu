@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Logo } from "@/components/Logo";
 import { SectionCard } from "@/components/SectionCard";
 import { sections } from "@/lib/data";
 import Link from "next/link";
@@ -9,16 +10,18 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-b from-cream to-white px-6 py-20 sm:py-28">
+        <section className="relative overflow-hidden bg-gradient-to-b from-cream to-white px-6 py-16 sm:py-24">
           <div className="pointer-events-none absolute inset-0 opacity-30">
             <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-saffron/20 blur-3xl" />
             <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-maroon/10 blur-3xl" />
           </div>
           <div className="relative mx-auto max-w-4xl text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-saffron-dark">
-              Your Spiritual Bridge
-            </p>
-            <h1 className="mt-4 text-5xl font-semibold tracking-tight text-maroon sm:text-6xl">
+            <Logo
+              variant="full"
+              className="mx-auto h-40 w-auto object-contain sm:h-52"
+              priority
+            />
+            <h1 className="mt-8 text-5xl font-semibold tracking-tight text-maroon sm:text-6xl">
               Dharmasetu
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-stone-600">
