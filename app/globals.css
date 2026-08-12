@@ -16,14 +16,15 @@
   --color-saffron-dark: var(--saffron-dark);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-devanagari: var(--font-devanagari);
 }
 
 body {
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-body), var(--font-devanagari), system-ui, sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-display), var(--font-devanagari), Georgia, serif;
 }

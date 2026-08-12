@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { FeatureSection } from "@/lib/data";
 
 export function SectionCard({ section }: { section: FeatureSection }) {
+  const isLive = section.slug === "yagya-pooja";
+
   return (
     <Link
       href={`/${section.slug}`}
@@ -14,8 +16,14 @@ export function SectionCard({ section }: { section: FeatureSection }) {
           </h3>
           <p className="mt-1 text-sm text-stone-500">{section.tagline}</p>
         </div>
-        <span className="shrink-0 rounded-full bg-saffron/10 px-2.5 py-1 text-xs font-medium text-saffron-dark">
-          Coming Soon
+        <span
+          className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${
+            isLive
+              ? "bg-maroon/10 text-maroon"
+              : "bg-saffron/10 text-saffron-dark"
+          }`}
+        >
+          {isLive ? "Pricing" : "Coming Soon"}
         </span>
       </div>
       <ul className="flex flex-wrap gap-2">
