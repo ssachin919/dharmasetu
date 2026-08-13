@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
+import { PageHero } from "@/components/PageHero";
 import { ProofFrame } from "@/components/ProofFrame";
 import { TrustBadge } from "@/components/TrustBadge";
 import { getHub, hubs } from "@/lib/hubs";
@@ -37,18 +38,12 @@ export default async function RitualDetailPage({ params }: Props) {
 
   return (
     <main id="main">
-      <section
-        className={
-          ritual.sensitive
-            ? "bg-setu-indigo/95 py-16 text-sacred-cream sm:py-20"
-            : "bg-setu-indigo py-16 text-sacred-cream sm:py-20"
-        }
-      >
+      <PageHero>
         <Container>
           <p className="label-caps text-[11px] text-temple-saffron">
             {ritual.sensitive ? "Offered with care" : "Ritual"}
           </p>
-          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] sm:text-5xl">
+          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] text-sacred-cream sm:text-5xl">
             {ritual.name}
           </h1>
           <p lang="hi" className="mt-2 font-devanagari-serif text-lg text-temple-saffron">
@@ -64,7 +59,7 @@ export default async function RitualDetailPage({ params }: Props) {
             <TrustBadge onDark>E-Prasad</TrustBadge>
           </div>
         </Container>
-      </section>
+      </PageHero>
 
       <section className="bg-sacred-cream py-16 sm:py-20">
         <Container className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">

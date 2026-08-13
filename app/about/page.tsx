@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
+import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "About",
@@ -31,17 +32,17 @@ const values = [
 export default function AboutPage() {
   return (
     <main id="main">
-      <section className="bg-setu-indigo py-16 text-sacred-cream sm:py-20">
+      <PageHero priority>
         <Container className="max-w-3xl">
           <p className="label-caps text-[11px] text-temple-saffron">About</p>
-          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] sm:text-5xl">
+          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] text-sacred-cream sm:text-5xl">
             Dharma, and the bridge that carries it.
           </h1>
           <p lang="hi" className="mt-4 font-devanagari-serif text-temple-saffron">
             सर्वं खल्विदं ब्रह्म
           </p>
         </Container>
-      </section>
+      </PageHero>
 
       <section className="bg-sacred-cream py-16 sm:py-20">
         <Container className="grid items-start gap-12 md:grid-cols-[8rem_1fr]">

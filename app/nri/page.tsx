@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { PageHero } from "@/components/PageHero";
 import { ProofFrame } from "@/components/ProofFrame";
 import { panchangWhatsappUrl } from "@/lib/site";
 
@@ -32,12 +33,12 @@ const cases = [
 export default function NriPage() {
   return (
     <main id="main">
-      <section className="bg-setu-indigo py-16 text-sacred-cream sm:py-20">
+      <PageHero priority>
         <Container className="max-w-3xl">
           <p className="label-caps text-[11px] text-temple-saffron">
             For the Connected NRI
           </p>
-          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] sm:text-5xl">
+          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] text-sacred-cream sm:text-5xl">
             Wherever you are, your devotion reaches home.
           </h1>
           <p className="mt-5 text-sacred-cream/80">
@@ -46,7 +47,7 @@ export default function NriPage() {
             who still belongs to Kashi, even from another continent.
           </p>
         </Container>
-      </section>
+      </PageHero>
 
       <section className="bg-sacred-cream py-16 sm:py-20">
         <Container className="grid items-center gap-12 lg:grid-cols-2">

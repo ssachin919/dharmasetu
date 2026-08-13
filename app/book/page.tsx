@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BookingForm } from "@/components/BookingForm";
 import { Container } from "@/components/Container";
+import { PageHero } from "@/components/PageHero";
 import { TrustBadge } from "@/components/TrustBadge";
 import { rituals } from "@/lib/rituals";
 
@@ -24,12 +25,12 @@ export default async function BookPage({ searchParams }: Props) {
 
   return (
     <main id="main">
-      <section className="bg-setu-indigo py-16 text-sacred-cream sm:py-20">
+      <PageHero priority>
         <Container className="max-w-3xl">
           <p className="label-caps text-[11px] text-temple-saffron">
             Book a ritual
           </p>
-          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] sm:text-5xl">
+          <h1 className="mt-4 font-display text-[34px] font-semibold leading-[1.15] text-sacred-cream sm:text-5xl">
             Under two minutes. Then the ghat does the rest.
           </h1>
           <p className="mt-5 text-sacred-cream/80">
@@ -43,7 +44,7 @@ export default async function BookPage({ searchParams }: Props) {
             <TrustBadge onDark>Personalised Sankalpa</TrustBadge>
           </div>
         </Container>
-      </section>
+      </PageHero>
       <section className="bg-sacred-cream py-16 sm:py-20">
         <Container className="max-w-3xl">
           <BookingForm

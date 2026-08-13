@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
 import { HubCard } from "@/components/HubCard";
+import { PageHero } from "@/components/PageHero";
 import { hubs } from "@/lib/hubs";
 
 export const metadata: Metadata = {
@@ -13,12 +14,12 @@ export const metadata: Metadata = {
 export default function HubsPage() {
   return (
     <main id="main">
-      <section className="bg-setu-indigo py-16 text-sacred-cream sm:py-20">
+      <PageHero priority>
         <Container>
           <p className="label-caps text-[11px] text-temple-saffron">
             Sacred hubs
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-[34px] font-semibold leading-[1.15] sm:text-5xl">
+          <h1 className="mt-4 max-w-3xl font-display text-[34px] font-semibold leading-[1.15] text-sacred-cream sm:text-5xl">
             India&apos;s living centres of rite.
           </h1>
           <p className="mt-5 max-w-2xl text-sacred-cream/80">
@@ -26,7 +27,7 @@ export default function HubsPage() {
             Sangam, Mahakal, Braj, and Ayodhya already receive names.
           </p>
         </Container>
-      </section>
+      </PageHero>
       <section className="bg-sacred-cream py-16 sm:py-20">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

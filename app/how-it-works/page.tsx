@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
+import { PageHero } from "@/components/PageHero";
 import { ProofFrame } from "@/components/ProofFrame";
 import { SectionHeading } from "@/components/SectionHeading";
 import { steps } from "@/lib/site";
@@ -42,7 +43,7 @@ const promises = [
 export default function HowItWorksPage() {
   return (
     <main id="main">
-      <section className="bg-setu-indigo py-16 text-sacred-cream sm:py-20">
+      <PageHero priority>
         <Container>
           <p className="label-caps text-[11px] text-temple-saffron">
             How it works
@@ -55,7 +56,7 @@ export default function HowItWorksPage() {
             sacred hub. Personalised video within 24 hours.
           </p>
         </Container>
-      </section>
+      </PageHero>
 
       <section className="bg-sacred-cream py-16 sm:py-24">
         <Container>

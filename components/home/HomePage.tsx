@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Check } from "lucide-react";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
-import { GhatStill } from "@/components/GhatStill";
+import { GhatBackdrop } from "@/components/GhatBackdrop";
 import { HubCard } from "@/components/HubCard";
 import { ProofFrame } from "@/components/ProofFrame";
 import { RitualCard } from "@/components/RitualCard";
@@ -40,12 +40,9 @@ export function HomePage() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-setu-indigo text-sacred-cream">
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 lg:block">
-        <GhatStill className="h-full w-full object-cover opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-setu-indigo via-setu-indigo/70 to-transparent" />
-      </div>
-      <Container className="relative grid items-center gap-10 py-16 sm:py-24 lg:grid-cols-2 lg:py-28">
-        <FadeIn>
+      <GhatBackdrop priority />
+      <Container className="relative py-16 sm:py-24 lg:py-28">
+        <FadeIn className="max-w-xl lg:max-w-2xl">
           <p className="label-caps text-[11px] text-temple-saffron">
             Namaste
           </p>
@@ -77,9 +74,6 @@ function Hero() {
             <TrustBadge onDark>Verified Ved-pathshala Pandit</TrustBadge>
           </div>
         </FadeIn>
-        <div className="lg:hidden">
-          <GhatStill className="h-auto w-full rounded-lg opacity-90" />
-        </div>
       </Container>
     </section>
   );

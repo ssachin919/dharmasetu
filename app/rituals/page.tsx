@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { FadeIn } from "@/components/FadeIn";
+import { PageHero } from "@/components/PageHero";
 import { RitualCard } from "@/components/RitualCard";
 import { ritualCategories, ritualsByCategory } from "@/lib/rituals";
 
@@ -13,12 +14,12 @@ export const metadata: Metadata = {
 export default function RitualsPage() {
   return (
     <main id="main">
-      <section className="bg-setu-indigo py-16 text-sacred-cream sm:py-20">
+      <PageHero priority>
         <Container>
           <p className="label-caps text-[11px] text-temple-saffron">
             Phase 1 · Virtual sevas
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-[34px] font-semibold leading-[1.15] sm:text-5xl">
+          <h1 className="mt-4 max-w-3xl font-display text-[34px] font-semibold leading-[1.15] text-sacred-cream sm:text-5xl">
             Named rites, performed in your Name.
           </h1>
           <p className="mt-5 max-w-2xl text-sacred-cream/80">
@@ -28,7 +29,7 @@ export default function RitualsPage() {
             complete. No hidden charges.
           </p>
         </Container>
-      </section>
+      </PageHero>
       <section className="bg-sacred-cream py-16 sm:py-20">
         <Container className="space-y-16">
           {ritualCategories.map((category) => {

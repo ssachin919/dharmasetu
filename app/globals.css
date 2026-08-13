@@ -42,13 +42,15 @@ body {
   line-height: 1.6;
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-display), var(--font-devanagari-serif), Georgia, serif;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--setu-indigo);
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), var(--font-devanagari-serif), Georgia, serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--setu-indigo);
+  }
 }
 
 :focus-visible {

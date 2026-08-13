@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
+import { PageHero } from "@/components/PageHero";
 import { RitualCard } from "@/components/RitualCard";
 import { getHub, hubs } from "@/lib/hubs";
 import { ritualsForHub } from "@/lib/rituals";
@@ -33,12 +34,12 @@ export default async function HubDetailPage({ params }: Props) {
 
   return (
     <main id="main">
-      <section className="bg-setu-indigo py-16 text-sacred-cream sm:py-20">
+      <PageHero>
         <Container>
           <p lang="hi" className="font-devanagari-serif text-temple-saffron">
             {hub.nameHi}
           </p>
-          <h1 className="mt-2 font-display text-[34px] font-semibold leading-[1.15] sm:text-5xl">
+          <h1 className="mt-2 font-display text-[34px] font-semibold leading-[1.15] text-sacred-cream sm:text-5xl">
             {hub.name}
           </h1>
           <p className="mt-3 text-sacred-cream/75">{hub.deity}</p>
@@ -46,7 +47,7 @@ export default async function HubDetailPage({ params }: Props) {
             {hub.tagline}
           </p>
         </Container>
-      </section>
+      </PageHero>
       <section className="bg-sacred-cream py-16 sm:py-20">
         <Container className="max-w-3xl">
           <h2 className="font-display text-2xl font-semibold text-setu-indigo sm:text-3xl">
