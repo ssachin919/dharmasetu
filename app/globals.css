@@ -1,30 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #faf7f2;
-  --maroon: #6b1d1d;
-  --maroon-light: #8a2e2e;
-  --saffron: #e8841a;
-  --saffron-dark: #c46a0f;
+  --setu-indigo: #1b2a5b;
+  --sacred-cream: #f6f1e4;
+  --temple-saffron: #e38a29;
+  --ink-indigo: #2a3355;
+  --tulsi-green: #5c7a5a;
+  --cream-raised: color-mix(in srgb, var(--sacred-cream) 92%, var(--setu-indigo));
+  --saffron-deep: color-mix(in srgb, var(--temple-saffron) 82%, var(--setu-indigo));
 }
 
 @theme inline {
-  --color-cream: var(--cream);
-  --color-maroon: var(--maroon);
-  --color-maroon-light: var(--maroon-light);
-  --color-saffron: var(--saffron);
-  --color-saffron-dark: var(--saffron-dark);
+  --color-setu-indigo: var(--setu-indigo);
+  --color-sacred-cream: var(--sacred-cream);
+  --color-temple-saffron: var(--temple-saffron);
+  --color-ink-indigo: var(--ink-indigo);
+  --color-tulsi-green: var(--tulsi-green);
+  --color-cream-raised: var(--cream-raised);
+  --color-saffron-deep: var(--saffron-deep);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-devanagari: var(--font-devanagari);
+  --font-devanagari-serif: var(--font-devanagari-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
+  background: var(--sacred-cream);
+  color: var(--ink-indigo);
   font-family: var(--font-body), var(--font-devanagari), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-display), var(--font-devanagari), Georgia, serif;
+  font-family: var(--font-display), var(--font-devanagari-serif), Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--setu-indigo);
+}
+
+:focus-visible {
+  outline: 2px solid var(--temple-saffron);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-devanagari-serif), Georgia, serif;
+}
+
+.font-devanagari-serif {
+  font-family: var(--font-devanagari-serif), var(--font-display), Georgia, serif;
+}
+
+.label-caps {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.setu-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--temple-saffron) 55%, var(--setu-indigo)) 50%,
+    transparent 100%
+  );
 }
